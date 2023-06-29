@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: Bubble is generally slower since in order to sort array bubble sorting method requires more swaps than selection.
+
+sort2 uses: Merge
+
+How do you know?: Merge sorting method is generally faster than other 2 methods, while using more memory. It achieves this by constantly dividing array so it can work with smaller arrays.
+
+sort3 uses: Selection
+
+How do you know?: Selection needs fewer swaps than bubble.

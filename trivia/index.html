@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is you favorite animal? </h3>
+                <button id="Dog" style ="cursor: pointer" onclick="incorrect()">Dog</button>
+                <button id="Snake" style ="cursor: pointer" onclick="incorrect()">Snake</button>
+                <button id="Fish" style ="cursor: pointer" onclick="incorrect()">Fish</button>
+                <button id="Cat" style ="cursor: pointer" onclick="correct()">Cat</button>
+                <p id="demo"></p>
+            </div>
+            <script>
+                function incorrect() {
+                document.getElementById("demo").innerHTML = "Incorrect";
+                }
+
+                function correct() {
+                  document.getElementById("demo").innerHTML = "Correct!";
+                }
+
+                const Dog = document.getElementById('Dog');
+                Dog.addEventListener('click', function onClick() {
+                Dog.style.backgroundColor = 'red';
+                Dog.style.color = 'white';
+                });
+
+                const Snake = document.getElementById('Snake');
+                Snake.addEventListener('click', function onClick() {
+                    Snake.style.backgroundColor = 'red';
+                Snake.style.color = 'white';
+                });
+
+                const Fish = document.getElementById('Fish');
+                Fish.addEventListener('click', function onClick() {
+                Fish.style.backgroundColor = 'red';
+                Fish.style.color = 'white';
+                });
+
+                const Cat = document.getElementById('Cat');
+                Cat.addEventListener('click', function onClick() {
+                Cat.style.backgroundColor = 'green';
+                Cat.style.color = 'white';
+                });
+
+            </script>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is you favorite animal? </h3>
+                <label for="Answer">Answer</label>
+                <input type="text" id="Answer" name="Answer">
+                <button style ="cursor: pointer" onclick="Submit()">Submit</button>
+                <p id="sub"></p>
+                <script>
+                    function Submit() {
+                    var name = document.getElementById("Answer").value;
+                    if (name=="Cat" || name=="cat" ){
+                        sub.style.backgroundColor = 'green';
+                        sub.style.color = 'white';
+                        sub.style.width = "55px";
+                        document.getElementById("sub").innerHTML = "Correct!";
+                    }
+                    else{
+                        sub.style.backgroundColor = 'red';
+                        sub.style.color = 'white';
+                        sub.style.width = "60px";
+                        document.getElementById("sub").innerHTML = "Incorrect";
+                    }
+                }
+                </script>
+
+            </div>
+        </div>
+    </body>
+</html>
