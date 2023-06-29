@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <div class="t_l">
+        {% for user in users %}
+        {{ user.username }}:{{ usd(user.cash) }}
+        {% endfor%}
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Ammount</th>
+                <th>Name</th>
+                <th>Total</th>
+                <th>Buy</th>
+                <th>Sell</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set count = namespace(value=0) %}
+            {% set total = namespace(value=0) %}
+            {% for stock in transactions %}
+                <tr>
+                    <td>{{ stock.Symbol }}</td>
+                    <td>{{  usd(list_1[count.value]) }}</td>
+                    <td>{{ stock.c }}</td>
+                    <td>{{ stock.Name }}</td>
+                    <td>{{ usd(list_1[count.value]*stock.c) }}</td>
+                    <td>
+                        <form action="buy" method="post">
+                            <input name="symbol" placeholder="Symbol" type="hidden" value="{{ stock.Symbol }}">
+                            <input name="shares" placeholder="shares" type="number" value="1">
+                            <button class="btn btn-primary" type="submit">Buy</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="sell" method="post">
+                            <input name="symbol" placeholder="Symbol" type="hidden" value="{{ stock.Symbol }}">
+                            <input name="shares" placeholder="shares" type="number" value="1">
+                            <button class="btn btn-primary" type="submit">Sell</button>
+                        </form>
+                    </td>
+                        {% set total.value = total.value + list_1[count.value]*stock.c %}
+                        {% set count.value = count.value + 1 %}
+                </tr>
+            {% endfor%}
+        </tbody>
+        </table>
+        <div class="total">
+            Total:{{ usd(total.value) }}
+        </div>
+</div>
+{% endblock %}

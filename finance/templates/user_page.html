@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <div class="t_l">
+        {% for user in users %}
+        {{ user.username }}:{{ usd(user.cash) }}
+        {% endfor%}
+    </div>
+<h2>Add founds</h2>
+<form action="add_founds" method="post">
+    <div class="mb-3">
+        <input name="amt" placeholder="USD" type="number" value="1">
+        <button class="btn btn-primary" type="submit">add</button>
+    </div>
+</form>
+<h2>Update Password</h2>
+<form action="user_page" method="post">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="password" name="old_password" placeholder="Old Password" type="password">
+        <input class="form-control mx-auto w-auto" id="password" name="old_confirmation" placeholder="confirmation" type="password">
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="New Password" type="password">
+        <input class="form-control mx-auto w-auto" id="password" name="confirmation" placeholder="confirmation" type="password">
+    </div>
+    <button class="btn btn-primary" type="submit">Update</button>
+</form>
+{% endblock %}

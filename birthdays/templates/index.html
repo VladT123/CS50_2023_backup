@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <form action="/" method="post">
+                    <input name="name" placeholder="Name" type="text">
+                    <input name="month" placeholder="Month" type="number" min="1" max="12">
+                    <input name="day" placeholder="Day" type="number" min="1" max="131">
+                    <input type="Submit" value="Add Birthday">
+                </form>
+            </div>
+        </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                            <th>Modify</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for birthday in birthdays%}
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                                <td>
+                                    <details class="details-example">
+                                        <summary></summary>
+                                        <ul>
+                                            <li>
+                                                <form action="/edit" method="post">
+                                                    <input name="id" type="hidden" value="{{ birthday.id }}">
+                                                    <input name="name" placeholder="Name" type="text" value="{{ birthday.name }}">
+                                                    <input name="month" placeholder="Month" type="number" min="1" max="12" value="{{ birthday.month }}">
+                                                    <input name="day" placeholder="Day" type="number" min="1" max="131" value="{{ birthday.day }}">
+                                                    <input type="Submit" value="change">
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form action="/delete" method="POST">
+                                                    <input name="id" type="hidden" value="{{ birthday.id }}">
+                                                    <input class="btn btn-danger mt-3" type="Submit" value="delete">
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </td>
+                            </tr>
+                        {% endfor%}
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "blcok";
+        } else {
+            x.style.display = "none";
+        }
+        }
+    </script>
+</html>

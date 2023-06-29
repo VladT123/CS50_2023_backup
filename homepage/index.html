@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body onload="owl_wisdom(this)">
+        <div class="headermain">
+            <h1 class="hmtxt">Owl info</h1>
+        </div>
+
+        <div class="wise_owl">
+            <img src="output-onlinepngtools.png" alt="Wise Owl" height="120" onclick="owl_wisdom(this);">
+            <div class="wise">
+                <p id="wisdom"></p>
+            </div>
+
+        </div>
+
+        <div class="return">
+            <a href="index.html"><img alt="Home" src="https://images.emojiterra.com/google/android-11/512px/1f989.png" width="100" height="100"></a>
+        </div>
+
+        <div class="txt">
+             Owls are birds from the order Strigiformes (/ˈstrɪdʒəfɔːrmiːz/), which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight. Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl.
+        </div>
+
+        <div class="txt">
+            Owls hunt mostly small mammals, insects, and other birds, although a few species specialize in hunting fish. They are found in all regions of the Earth except the polar ice caps and some remote islands.
+        </div>
+
+        <div class="txt">
+            Owls are divided into two families: the true (or typical) owl family, Strigidae, and the barn-owl family, Tytonidae.
+        </div>
+
+        <div class="txt">
+            On this website you can find information about Barn owls, true owls, and how they are depicted around the globe in mythos and stories of different culutres.
+        </div>
+        <div class="txt">
+            You can accsess different parts of this website by clicing on one of the picture below that will lead you to information about Barn Owls, true owls, cultural significance of the owls and a gallert respectivly.
+        </div>
+
+        <div class="menu">
+            <a href="page1.html"><img height="500" width="400" class="img" alt="Barn-owls" src="african_grass_owl_Hayleyk.jpg"></a>
+            <a href="page2.html"><img height="500" width="400" class="img" alt="True owl" src="european_owl.jpg"></a>
+            <a href="page3.html"><img height="500" width="400" class="img" alt="Owls in different cultures" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Aryballos_owl_Louvre_CA1737.jpg/270px-Aryballos_owl_Louvre_CA1737.jpg"></a>
+            <a href="gallery.html"><img height="500" class="img" alt="Asian owls" src="https://cdn.theatlantic.com/media/img/photo/2021/02/photos-superb-owl-sunday-v-1/a01_1290698344-1/original.jpg"></a>
+        </div>
+
+        <script>
+            function getRandomInt(max)
+            {
+                return Math.floor(Math.random() * max);
+            }
+            function owl_wisdom()
+            {
+                var x = getRandomInt(15);
+                var z;
+                const wisdom = document.getElementById('wisdom');
+                if (x==0)
+                {
+                    wisdom.style.ffontSize = "25px";
+                    document.getElementById("wisdom").innerHTML = "Owls are birds from the order Strigiformes";
+                }
+                else if (x==1)
+                {
+                    wisdom.style.fontSize = "20px";
+                    document.getElementById("wisdom").innerHTML = "Owls are divided into two families: the true (or typical) owl family, Strigidae, and the barn-owl family, Tytonidae.";
+                }
+                else if (x==2)
+                {
+                    wisdom.style.fontSize = "16px";
+                    document.getElementById("wisdom").innerHTML = "The wooden owl is an integral part of an ancient and indigenous tradition and art form in Bengal along with its auspicious association with Goddess of wealth, Laxmi.";
+                }
+                else if (x==3)
+                {
+                    wisdom.style.fontSize = "15px";
+                    document.getElementById("wisdom").innerHTML = "Many owl species have asymmetrical ears. When located at different heights on the owl’s head, their ears are able to pinpoint the location of sounds in multiple dimensions. Ready, aim, strike.";
+                }
+                else if (x==4)
+                {
+                    wisdom.style.fontSize = "14.5px";
+                    document.getElementById("wisdom").innerHTML = "The eyes of an owl are not true “eyeballs.” Their tube-shaped eyes are completely immobile, providing binocular vision which fully focuses on their prey and boosts depth perception.";
+                }
+                else if (x==5)
+                {
+                    wisdom.style.fontSize = "16px";
+                    document.getElementById("wisdom").innerHTML = "Owls can rotate their necks 270 degrees. A blood-pooling system collects blood to power their brains and eyes when neck movement cuts off circulation.";
+                }
+                else if (x==6)
+                {
+                    wisdom.style.fontSize = "17px";
+                    document.getElementById("wisdom").innerHTML = "A group of owls is called a parliament. This originates from C.S. Lewis’ description of a meeting of owls in The Chronicles of Narnia.";
+                }
+                else if (x==7)
+                {
+                    wisdom.style.fontSize = "20px";
+                    document.getElementById("wisdom").innerHTML = "Owls hunt other owls. Great Horned Owls are the top predator of the smaller Barred Owl.";
+                }
+                else if (x==8)
+                {
+                    wisdom.style.fontSize = "14.5px";
+                    document.getElementById("wisdom").innerHTML = "The tiniest owl in the world is the Elf Owl, which is 5 - 6 inches tall and weighs about 1 ½ ounces. The largest North American owl, in appearance, is the Great Gray Owl, which is up to 32 inches tall";
+                }
+                else if (x==9)
+                {
+                    wisdom.style.fontSize = "20px";
+                    document.getElementById("wisdom").innerHTML = "The Northern Hawk Owl can detect—primarily by sight—a vole to eat up to a half a mile away.";
+                }
+                else if (x==10)
+                {
+                    wisdom.style.fontSize = "24px";
+                    document.getElementById("wisdom").innerHTML = "All owls are cats running on cat software and having a bird hardware";
+                }
+                else if (x==11)
+                {
+                    wisdom.style.fontSize = "20px";
+                    document.getElementById("wisdom").innerHTML = "Barn Owls swallow their prey whole—skin, bones, and all—and they eat up to 1,000 mice each year.";
+                }
+                else if (x==12)
+                {
+                    wisdom.style.fontSize = "16.5px";
+                    document.getElementById("wisdom").innerHTML = "Northern Saw-whet Owls can travel long distances over large bodies of water. One showed up 70 miles from shore near Montauk, New York.";
+                }
+                else if (x==13)
+                {
+                    wisdom.style.fontSize = "15px";
+                    document.getElementById("wisdom").innerHTML = "Not all owls hoot! Barn Owls make hissing sounds, the Eastern Screech-Owl whinnies like a horse, and Saw-whet Owls sound like, well, an old whetstone sharpening a saw. Hence the name. ";
+                }
+                else if (x==14)
+                {
+                    wisdom.style.fontSize = "13px";
+                    document.getElementById("wisdom").innerHTML = "Owls are zygodactyl, which means their feet have two forward-facing toes and two backward-facing toes. Unlike most other zygodactyl birds, however, owls can pivot one of their back toes forward to help them grip and walk. ";
+                }
+                else
+                {
+                    wisdom.style.fontSize = "25px";
+                    document.getElementById("wisdom").innerHTML = "Owls are birds from the order Strigiformes";
+                }
+            }
+        </script>
+</html>

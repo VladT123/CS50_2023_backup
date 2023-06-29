@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Info
+{% endblock %}
+
+{% block main %}
+{% for user in users %}
+<h1> {{ user.username }}:{{ usd(user.cash) }}</h1>
+{% endfor%}
+
+<h2>{{ symbol.symbol }}</h2>
+<h3>You {{ msg }} a share of {{ symbol.name }} cost {{ usd(symbol.price) }}  for a total of {{ usd(symbol.price * amt) }}</h3>
+{% endblock %}

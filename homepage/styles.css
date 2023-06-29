@@ -1,0 +1,137 @@
+body {
+    background-color : #EEECDC;
+    color: #212529;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+.return {
+  position:absolute;
+  margin-top:0.5rem;
+  top:0;
+  left:0;
+}
+.icon {
+    margin-bottom: 2rem;
+}
+
+.txt {
+  text-indent: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.wise_owl {
+  position:absolute;
+  cursor: pointer;
+  top:0;
+  right:0;
+}
+
+.wise {
+  position:absolute;
+  text-align: center;
+  top:0;
+  padding-left: 7rem;
+  padding-right: 10rem;
+
+}
+.buble {
+  position:absolute;
+  font-size: 1.5rem;
+  top:0;
+  padding-left: 54rem;
+  padding-right: 8rem;
+  text-align: left;
+}
+
+.header {
+    background-color: #7DCB34;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.headermain {
+    background-color: #FFD981;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom:1rem;
+}
+.hmtxt {
+  padding-right: 3rem;
+  text-align: center;
+}
+.menu {
+  margin-top:2rem;
+  text-align: center;
+}
+
+.img:hover{
+  color: #424242;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+transition: all .3s ease-in;
+opacity: 1;
+transform: scale(1.15);
+-ms-transform: scale(1.15); /* IE 9 */
+-webkit-transform: scale(1.15); /* Safari and Chrome */
+
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-button{
+    background-color: #DDDAC0;
+}
+.accordion-body{
+    background-color: #EEECDC;
+}
+
+/* Gallery start The grid: Four equal columns that floats next to each other */
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  /*Gallery end*/

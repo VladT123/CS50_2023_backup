@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+    {% for user in users %}
+    <h1> {{ user.username }}:{{ usd(user.cash) }} </h1>
+    {% endfor%}
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Ammount</th>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stock in archive %}
+            <tr>
+                <td>{{ stock.Type }}</td>
+                <td>{{ stock.Amount }}</td>
+                <td>{{ stock.Name }}</td>
+                <td>{{ usd(stock.cost) }}</td>
+                <td>{{ usd(stock.Amount*stock.cost) }}</td>
+            </tr>
+        {% endfor%}
+    </tbody>
+{% endblock %}
